@@ -7,10 +7,14 @@ watch:
 
 build:
 	if [ ! -d "build" ]; then mkdir build; fi
+
 	cp index.html build
+	cp sample.md build
+
 	cp -R css build
 	cp -R js build
-	cat res/*.js > build/js/res.js
+	cp -R res build
+	cp -R templates build
 
 clean:
 	if [ -d "res/Font-Awesome" ]; then \
