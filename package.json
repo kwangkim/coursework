@@ -15,7 +15,7 @@
   "volo": {
     "baseUrl": "res",
     "dependencies": {
-      "jquery": "github:jquery/jquery/2.0.2",
+      "jquery": "github:jquery/jquery/2.0.3",
       "marked": "github:chjj/marked/v0.2.9",
       "highlight": "github:isagalaev/highlight.js/7.3",
       "require": "github:jrburke/requirejs/2.1.6",
