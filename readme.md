@@ -22,17 +22,9 @@ Coming soon
 
 Assuming you have Git and Node and are using some sort of Unix:
 
-    # Get the code
     git clone https://github.com/lavelle/coursework.git
     cd coursework
-
-    # Install Volo for package managing
-    [sudo] npm install -g volo
-
-    volo install     # Install libraries
-    make clean       # Tidy up libraries
-    make compile     # Compile CoffeeScript and Sass
-    open index.html  # Use it
+    tools/setup.sh
 
 ## Why is this?
 

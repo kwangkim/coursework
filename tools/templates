@@ -1,0 +1,13 @@
+#! /usr/bin/env coffee
+
+fs = require 'fs'
+
+configs = [
+    {name: 'index', templates: ['modal', 'toolbar', 'settings']}
+]
+
+escape = (s) -> s.replace('"', '\\"').replace("\n", "")
+
+build = ->
+    for config in configs
+
