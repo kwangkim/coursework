@@ -20,11 +20,17 @@ Coming soon
 
 ### Build from scratch
 
-Assuming you have Git and Node and are using some sort of Unix:
+Assuming you have Git, Node, Sass and CoffeeScript and are using some sort of Unix:
 
     git clone https://github.com/lavelle/coursework.git
     cd coursework
-    tools/setup.sh
+
+    # Install Volo for package managing
+    [sudo] npm install -g volo
+
+    volo install     # Install libraries
+    make clean       # Tidy up libraries
+    make compile     # Compile CoffeeScript and Sass
 
 ## Why is this?
 
