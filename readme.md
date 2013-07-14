@@ -20,23 +20,23 @@ Coming soon
 
 ### Build from scratch
 
-Assuming you have Git, Node, Sass and CoffeeScript and are using some sort of Unix:
+Make sure you have all the system dependencies:
+
+- Not Windows
+- Git
+- Node.js
+- Sass
+- Python
+
+then run
 
     git clone https://github.com/lavelle/coursework.git
     cd coursework
-
-    # Install Volo for package managing
-    [sudo] npm install -g volo
-
-    volo install     # Install libraries
-    make clean       # Tidy up libraries
-    make compile     # Compile CoffeeScript and Sass
+    tools/setup.sh
 
 ## Why is this?
 
 I wanted to move to an all-digital solution for taking notes in lectures. I have to write lots of equations down, so I needed something for typesetting maths, but I also wanted a clean syntax for regular markup. LaTeX and Markdown fill these roles respectively, but I couldn't find anything that let you use both, and had a realtime preview.
-
-Written using CoffeeScript and Sass for bonus hipster points.
 
 ## Credits
 - [Ace Editor][]
@@ -46,7 +46,6 @@ Written using CoffeeScript and Sass for bonus hipster points.
 - [Dropbox.js][]
 - [Normalize.css][]
 - [Font Awesome][]
-- [Require.js][]
 - [Backbone][]
 - [Underscore][]
 - [jQuery][]
@@ -60,7 +59,6 @@ Written using CoffeeScript and Sass for bonus hipster points.
 [dropbox.js]:    https://github.com/dropbox/dropbox-js
 [normalize.css]: http://necolas.github.io/normalize.css/
 [font awesome]:  http://fortawesome.github.io/Font-Awesome/
-[require.js]:    http://requirejs.org/
 [Backbone]:      http://backbonejs.org/
 [Underscore]:    http://underscorejs.org/
 [jquery]:        http://jquery.com/
