@@ -5,7 +5,7 @@ echo "Proceed? (y/n)"
 read answer
 
 if [ $answer = "y" ]; then
-    echo "Installing global NPM modules."
+    echo "Installing global npm modules."
     npm install -g bower dependant coffee-script
 else
     echo "Exiting."
@@ -13,7 +13,7 @@ else
 fi
 
 if [ echo $? == "3" ]; then
-    echo "NPM install failed. You need to be root."
+    echo "npm install failed. You need to be root."
     echo "Try running sudo tools/setup.sh"
 fi
 
