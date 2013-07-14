@@ -4,6 +4,8 @@
 # the HTML as a string in a global object to be inserted into the DOM when
 # needed
 
+import os
+
 # A list of pairs of the form (file, templates), where file is the name of
 # a HTML file to generate a JST for, and templates is a list of template names,
 # without the .html extension
@@ -13,6 +15,9 @@ builds = [
 
 template_path = 'templates/%s.html'
 jst_path = 'js/templates/%s.js'
+
+if not os.path.isdir('js/templates'):
+    os.makedirs('js/templates')
 
 def build():
     for config in builds:
