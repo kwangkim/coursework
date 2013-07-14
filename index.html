@@ -12,10 +12,10 @@ MathJax.Hub.Config({
 });
 </script>
 
-<link rel="stylesheet" href="res/normalise.css">
+<link rel="stylesheet" href="vendor/normalize-css/normalize.css">
 <link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="res/highlight/src/styles/github.css">
-<link rel="stylesheet" href="res/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="vendor/highlightjs/styles/github.css">
+<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -44,10 +44,14 @@ MathJax.Hub.Config({
 
 </div>
 
-<script src="res/require.js"></script>
-<script src="res/ace/ace.js" charset="utf-8"></script>
-<script src="res/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script src="js/main.js" charset="utf-8"></script>
+<!-- <script src="/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
+<script src="vendor/jquery/jquery.js"></script>
+<script src="vendor/marked/lib/marked.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
+<script src="vendor/backbone/backbone.js"></script>
+<script src="vendor/highlightjs/highlight.pack.js"></script>
+
+<script src="js/all.js" charset="utf-8"></script>
 <script src="js/templates/index.js" charset="utf-8"></script>
 </body>
 
