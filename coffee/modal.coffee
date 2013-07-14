@@ -25,7 +25,7 @@ Modal = Backbone.View.extend
         @$el.fadeOut('fast')
 
     render: ->
-        @$el.html @template entries: @model.toJSON()
+        # @$el.html @template entries: @model.toJSON()
         this
 
 cw.Modal = Modal

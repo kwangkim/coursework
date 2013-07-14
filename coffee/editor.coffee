@@ -42,19 +42,18 @@ save_message = (doc) ->
 # Callback for when the document changes
 update = (delta) ->
     doc = editor.getValue()
-
     # Re-render Markdown and update viewer
-    dom.viewer.html marked doc
+    dom.viewer.html(marked(doc))
     # Format ordered lists
     formatLists()
     # Re-render equations
-    MathJax.Hub.Queue ['Typeset', MathJax.Hub, 'viewer']
+    MathJax.Hub.Queue(['Typeset', MathJax.Hub, 'viewer'])
 
     [msg, warning] = save_message doc
-    dom.save_message.css color: if warning then '#a00' else '#aaa'
+    dom.save_message.css({color: if warning then '#a00' else '#aaa'})
     dom.save_message.text msg
 
-editor.on 'change', update
+editor.on('change', update)
 
 cw.editor = editor
-cw.client = client
+cw.update = update

@@ -1,4 +1,4 @@
-Toolbar = Backbone.View.extend
+cw.Toolbar = Backbone.View.extend
     tagName: 'nav'
 
     events:

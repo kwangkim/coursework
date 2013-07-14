@@ -28,4 +28,4 @@ marked.setOptions
     smartLists: yes
     # Add the callback for syntax highlighting
     highlight: (code, lang) ->
-        hl.highlightAuto(code).value
+        hljs.highlightAuto(code).value

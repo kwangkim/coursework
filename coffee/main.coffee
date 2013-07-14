@@ -1,27 +1,29 @@
 $(document).ready ->
-    list = new FileList [{name: 'test'}]
+    # list = new FileList [{name: 'test'}]
 
-    modal = new Modal(model: list)
+    modal = new cw.Modal()
     modal.$el.appendTo('body')
     modal.render()
 
-    toolbar = new Toolbar()
+    toolbar = new cw.Toolbar()
     toolbar.$el.appendTo('header > .right')
     toolbar.render()
 
-    # Cache references to some DOM elements
-    for s in [
+    elements = [
         'viewer',
         'dropbox', 'open', 'save',
         'message', 'modal', 'save-message',
         'filename'
     ]
-        dom[s.replace('-', '_')] = $ '#' + s
-    dom.window = $ window
-    dom.shade = $ '.shade'
+
+    # Cache references to some DOM elements
+    window.dom[el.replace('-', '_')] = $('#' + el) for el in elements
+
+    window.dom.window = $ window
+    window.dom.shade = $ '.shade'
 
     # Load the sample document and insert it into the editor
-    $.get 'sample.md', (text) -> editor.setValue text
+    $.get('sample.md', (text) -> cw.editor.setValue(text))
 
     # Generate the initial document preview
-    update()
+    cw.update()
