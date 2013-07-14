@@ -8,7 +8,7 @@ Coursework is a text editor for writing technical documents, using Markdown for 
 
 It basically just ties together [Ace Editor][], [Marked][] and [MathJax][] and adds a couple of buttons.
 
-## How do I use this?
+## How do I use it?
 
 Type code in the editor on the left, see results in realtime in the viewer on the right. To save files you'll need to connect to Dropbox. You can use it [online][] or run a local copy.
 
