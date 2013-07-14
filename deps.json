@@ -1,0 +1,24 @@
+{
+    "vendor": {
+        "base": "vendor",
+        "packages": {}
+    },
+    "app": {
+        "intro": "intro",
+        "packages": {
+            "client": {},
+            "modal": {
+                "deps": ["client"]
+            },
+            "editor": {
+                "deps": ["client"]
+            },
+            "main": {
+                "deps": ["modal", "client", "editor"]
+            },
+            "toolbar": {
+                "deps": ["client", "editor"]
+            }
+        }
+    }
+}
