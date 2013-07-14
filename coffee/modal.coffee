@@ -1,35 +1,34 @@
-define ['jquery', 'underscore', 'backbone', 'client'], ($, _, Backbone, client) ->
-    {client} = client
+File = Backbone.Model.extend
+    defaults:
+        name: ''
 
-    File = Backbone.Model.extend
-        defaults:
-            name: ''
+FileList = Backbone.Collection.extend
+    model: File
 
-    FileList = Backbone.Collection.extend
-        model: File
+Modal = Backbone.View.extend
+    id: 'modal'
+    events:
+        'click .close': 'close'
 
-    Modal = Backbone.View.extend
-        id: 'modal'
-        events:
-            'click .close': 'close'
+    template: _.template(JST.modal)
 
-        template: _.template(JST.modal)
+    initialize: ->
+        # @listenTo @model, 'change', @render
+        # client.readdir '/', (error, entries) =>
+        #     if error
+        #         console.log error
+        #         return
 
-        initialize: ->
-            # @listenTo @model, 'change', @render
-            # client.readdir '/', (error, entries) =>
-            #     if error
-            #         console.log error
-            #         return
+        #     @entries = entries
 
-            #     @entries = entries
+    close: ->
+        @$el.fadeOut('fast')
 
-        close: ->
-            @$el.fadeOut('fast')
+    render: ->
+        @$el.html @template entries: @model.toJSON()
+        this
 
-        render: ->
-            @$el.html @template entries: @model.toJSON()
-            this
-
-    {Modal, File, FileList}
+cw.Modal = Modal
+cw.File = File
+cw.FileList = FileList
 

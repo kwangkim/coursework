@@ -1,30 +1,29 @@
-define(['dropbox'], (Dropbox) ->
-    client = new Dropbox.Client
-        key: 'bU8mb6wQpnA=|yAAb6C7Ke3/ROsEP06RqVJrxDez/09agnys6gI10Ag=='
-        sandbox: yes
+client = new Dropbox.Client
+    key: 'bU8mb6wQpnA=|yAAb6C7Ke3/ROsEP06RqVJrxDez/09agnys6gI10Ag=='
+    sandbox: yes
 
-    auth = ->
-        if client.isAuthenticated()
-            alert 'Already connected to Dropbox.'
+auth = ->
+    if client.isAuthenticated()
+        alert 'Already connected to Dropbox.'
+        return
+
+    client.authDriver new Dropbox.Drivers.Redirect rememberUser: yes
+
+    client.authenticate (error, authed_client) ->
+        if error
+            alert "Error: could not connect to Dropbox."
+            console.log error
             return
 
-        client.authDriver new Dropbox.Drivers.Redirect rememberUser: yes
+        authed_client.getUserInfo (error, info) ->
+            console.log info.name
 
-        client.authenticate (error, authed_client) ->
-            if error
-                alert "Error: could not connect to Dropbox."
-                console.log error
-                return
+# If a token from a previous session is saved in localStorage, the client
+# can be silently and automatically authenticated.
+for key of localStorage
+    if key.indexOf('dropbox-auth') isnt -1
+        auth()
+        break
 
-            authed_client.getUserInfo (error, info) ->
-                console.log info.name
-
-    # If a token from a previous session is saved in localStorage, the client
-    # can be silently and automatically authenticated.
-    for key of localStorage
-        if key.indexOf('dropbox-auth') isnt -1
-            auth()
-            break
-
-    {client, auth}
-)
+cw.client = client
+cw.auth = auth
