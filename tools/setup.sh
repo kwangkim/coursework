@@ -12,6 +12,11 @@ else
     exit
 fi
 
+if [ echo $? == "3" ]; then
+    echo "NPM install failed. You need to be root."
+    echo "Try running sudo tools/setup.sh"
+fi
+
 echo "Installing third-party dependencies."
 bower install
 # Hopefully these will be in Bower soon and these lines can be removed
