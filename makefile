@@ -2,6 +2,7 @@ compile:
 	if [ ! -d "css" ]; then mkdir css; fi
 	sass sass/style.sass css/style.css
 	coffee -c -o js coffee/*.coffee
+	dep > js/all.js
 
 watch:
 	ls sass/*.sass coffee/*.coffee | entr make compile
