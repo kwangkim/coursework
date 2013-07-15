@@ -34,6 +34,10 @@ then run
     cd coursework
     tools/setup.sh
 
+The app will *not* work from `file://` URLs, so you must run a server. To start the inbuilt server run `tools/server.coffee`. This will serve at `http://localhost:8000/`. The port is not customisable because the Dropbox API callback requires the URL to be constant.
+
+If this is an insurmountable problem file an issue and I'll add a new URL to the app's config. The only other valid URL right now is `http://localhost/coursework/`, in case you're serving your `~/code` out of Apache or something.
+
 ## Why is this?
 
 I wanted to move to an all-digital solution for taking notes in lectures. I have to write lots of equations down, so I needed something for typesetting maths, but I also wanted a clean syntax for regular markup. LaTeX and Markdown fill these roles respectively, but I couldn't find anything that let you use both, and had a realtime preview.
