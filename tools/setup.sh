@@ -17,11 +17,13 @@ if [ echo $? == "3" ]; then
     echo "Try running sudo tools/setup.sh"
 fi
 
-echo "Installing third-party dependencies."
+echo "Installing local npm modules."
+npm install
+
+echo "Installing client-side third-party dependencies."
 bower install
-# Hopefully these will be in Bower soon and these lines can be removed
-bower install mathjax/MathJax
-bower install https://cdnjs.cloudflare.com/ajax/libs/dropbox.js/0.9.2/dropbox.min.js
+# Hopefully these will be in the Bower registry soon and this line can be removed
+bower install mathjax/MathJax lavelle/dropbox
 
 echo "Compiling templates."
 tools/templates.py
