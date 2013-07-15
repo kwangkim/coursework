@@ -1,5 +1,5 @@
 client = new Dropbox.Client
-    key: 'bU8mb6wQpnA=|yAAb6C7Ke3/ROsEP06RqVJrxDez/09agnys6gI10Ag=='
+    key: 'vmtobv6ojlapzfg'
     sandbox: yes
 
 auth = ->
@@ -7,7 +7,7 @@ auth = ->
         alert 'Already connected to Dropbox.'
         return
 
-    client.authDriver new Dropbox.Drivers.Redirect rememberUser: yes
+    client.authDriver new Dropbox.AuthDriver.Redirect rememberUser: yes
 
     client.authenticate (error, authed_client) ->
         if error
