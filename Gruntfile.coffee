@@ -29,6 +29,8 @@ module.exports = (grunt) ->
       compile:
         files:
           'js/templates/index.js': ['templates/*.html']
+      options:
+        processName: (filename) -> filename.replace(/templates\/|\.html/gi, '')
 
     connect:
       server:

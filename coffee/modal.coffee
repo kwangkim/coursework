@@ -10,7 +10,7 @@ Modal = Backbone.View.extend
     events:
         'click .close': 'close'
 
-    template: _.template(JST.modal)
+    template: JST.modal(entries: ['test'])
 
     initialize: ->
         # @listenTo @model, 'change', @render
