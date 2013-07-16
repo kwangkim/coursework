@@ -22,7 +22,7 @@ module.exports = (grunt) ->
 
     watch:
       scripts:
-        files: ['sass/*.sass', 'coffee/*.coffee']
+        files: ['sass/*.sass', 'coffee/*.coffee', 'templates/*.html']
         tasks: ['default']
 
     jst:
@@ -44,4 +44,4 @@ module.exports = (grunt) ->
   for task in contribs
     grunt.loadNpmTasks "grunt-contrib-#{task}"
 
-  grunt.registerTask 'default', ['sass', 'coffee']
+  grunt.registerTask 'default', ['sass', 'coffee', 'jst']
