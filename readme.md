@@ -24,17 +24,16 @@ Make sure you have all the system dependencies:
 
 - Not Windows
 - Git
-- Node.js
+- Node.js (and therefore npm)
 - Sass
-- Python
 
 then run
 
     git clone https://github.com/lavelle/coursework.git
     cd coursework
-    tools/setup.sh
+    setup.sh
 
-The app will *not* work from `file://` URLs, so you must run a server. To start the inbuilt server run `tools/server.coffee`. This will serve at `http://localhost:8000/`. The port is not customisable because the Dropbox API callback requires the URL to be constant.
+The app will *not* work from `file://` URLs, so you must run a server. To start the inbuilt server run `grunt connect`. This will serve at `http://localhost:8000/`. If you change the port or hostname the Dropbox API calls won't work.
 
 If this is an insurmountable problem file an issue and I'll add a new URL to the app's config. The only other valid URL right now is `http://localhost/coursework/`, in case you're serving your `~/code` out of Apache or something.
 
