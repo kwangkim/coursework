@@ -20,8 +20,6 @@ One caveat if you're using the hosted version: the Dropbox API requires HTTPS UR
 
 Download [this][], extract it, run a server (`python -m SimpleHTTPServer` or something), then open the URL you're serving in the browser.
 
-Coming soon
-
 ### Build from scratch
 
 Make sure you have all the system dependencies:
