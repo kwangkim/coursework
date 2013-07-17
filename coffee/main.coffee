@@ -1,19 +1,12 @@
 $(document).ready ->
     # list = new FileList [{name: 'test'}]
 
-    modal = new cw.Modal()
-    modal.$el.appendTo('body')
-    modal.render()
-
     toolbar = new cw.Toolbar()
     toolbar.$el.appendTo('header > .right')
     toolbar.render()
 
     elements = [
-        'viewer',
-        'dropbox', 'open', 'save',
-        'message', 'modal', 'save-message',
-        'filename'
+        'viewer', 'message', 'save-message', 'filename'
     ]
 
     # Cache references to some DOM elements

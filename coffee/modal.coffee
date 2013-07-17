@@ -1,34 +1,30 @@
-File = Backbone.Model.extend
-    defaults:
-        name: ''
-
-FileList = Backbone.Collection.extend
-    model: File
-
-Modal = Backbone.View.extend
+cw.Modal = Backbone.View.extend
     id: 'modal'
     events:
         'click .close': 'close'
 
-    template: JST.modal(entries: ['test'])
+    title: 'default'
+    content: -> ''
+    load: ->
+
+    template: JST.modal()
 
     initialize: ->
-        # @listenTo @model, 'change', @render
-        # client.readdir '/', (error, entries) =>
-        #     if error
-        #         console.log error
-        #         return
-
-        #     @entries = entries
+        @load()
+        @$el.appendTo('body')
+        @render()
 
     close: ->
         @$el.fadeOut('fast')
+        dom.shade.hide()
 
     render: ->
-        # @$el.html @template entries: @model.toJSON()
+        @$el.html(@template)
+        @$('h2').text(@title)
+        @$('.content').html(@content())
+
         this
 
-cw.Modal = Modal
-cw.File = File
-cw.FileList = FileList
-
+    show: ->
+        dom.shade.show()
+        @$el.centre().fadeIn('fast')

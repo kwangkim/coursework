@@ -15,8 +15,8 @@ cw.Toolbar = Backbone.View.extend
     connect: -> cw.auth()
 
     open: ->
-        dom.shade.show()
-        dom.modal.centre().fadeIn('fast')
+        cw.browser = new cw.Browser() unless cw.browser
+        cw.browser.show()
 
     # Save the current document to Dropbox.
     save: ->
@@ -41,5 +41,5 @@ cw.Toolbar = Backbone.View.extend
             alert "File saved as #{filename}."
 
     settings: ->
-        dom.shade.show()
-        dom.modal.centre().fadeIn('fast')
+        cw.settings = new cw.Settings() unless cw.settings
+        cw.settings.show()
