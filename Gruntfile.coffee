@@ -85,11 +85,6 @@ module.exports = (grunt) ->
           dest: 'build'
         ]
 
-
-# <script src="vendor/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-# <script src="vendor/ace-builds/src/ace.js"></script>
-
-
   contribs = ['coffee', 'sass', 'watch', 'connect', 'clean', 'jst', 'copy', 'uglify']
 
   for task in contribs
