@@ -33,8 +33,6 @@ npm install
 
 echo "Installing client-side third-party dependencies."
 bower install
-# Hopefully these will be in the Bower registry soon and this line can be removed
-bower install mathjax/MathJax lavelle/dropbox
 
 echo "Building Coursework."
 grunt coffee sass jst
