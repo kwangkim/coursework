@@ -18,6 +18,8 @@ One caveat if you're using the hosted version: the Dropbox API requires HTTPS UR
 
 ### Download a build
 
+Download [this][], extract it, run a server (`python -m SimpleHTTPServer` or something), then open the URL you're serving in the browser.
+
 Coming soon
 
 ### Build from scratch
@@ -56,6 +58,7 @@ I wanted to move to an all-digital solution for taking notes in lectures. I have
 - [jQuery][]
 
 [online]: http://lavelle.github.io/coursework
+[this]: https://github.com/lavelle/coursework/archive/gh-pages.zip
 
 [ace editor]:    http://ace.ajax.org/
 [marked]:        https://github.com/chjj/marked
