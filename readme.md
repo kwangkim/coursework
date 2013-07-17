@@ -12,6 +12,8 @@ It basically just ties together [Ace Editor][], [Marked][] and [MathJax][] and a
 
 Type code in the editor on the left, see results in realtime in the viewer on the right. To save files you'll need to connect to Dropbox. You can use it [online][] or run a local copy.
 
+One caveat if you're using the hosted version: the Dropbox API requires HTTPS URLs, which GitHub Pages doesn't support, so you'll need to put an `s` in the URL if you want to connect to Dropbox. This will give you a security warning.
+
 ## How do I get it?
 
 ### Download a build
