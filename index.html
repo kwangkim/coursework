@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Coursework</title>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']]
+    }
+});
+</script>
+
+<link rel="stylesheet" href="vendor/normalize-css/normalize.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="vendor/highlightjs/styles/github.css">
+<link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+</head>
+
+<body>
+
+<div id="message"></div>
+<div class="shade"></div>
+
+<header>
+    <div class="left">
+        <i class="icon-pencil icon-2x" id="logo"></i>
+        <input type="text" id="filename" placeholder="Untitled document">
+        <div id="save-message" class"left"></div>
+    </div>
+
+    <div class="right"></div>
+</header>
+
+<div class="clearfix"></div>
+
+<div id="main">
+
+<div id="editor"></div>
+<div id="viewer"></div>
+
+<div class="clearfix"></div>
+
+</div>
+
+<script src="js/vendor.js" charset="utf-8"></script>
+<!--
+<script src="vendor/jquery/jquery.js"></script>
+<script src="vendor/underscore/underscore.js"></script>
+<script src="vendor/backbone/backbone.js"></script>
+<script src="vendor/marked/lib/marked.js"></script>
+<script src="vendor/highlightjs/highlight.pack.js"></script>
+<script src="vendor/dropbox/dropbox.js"></script>
+ -->
+
+<script src="vendor/ace-builds/src/ace.js" charset="utf-8"></script>
+<script src="vendor/MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"  charset="utf-8"></script>
+
+<script src="js/templates/index.js" charset="utf-8"></script>
+<script src="js/all.js" charset="utf-8"></script>
+
+</body>
+
+</html>
