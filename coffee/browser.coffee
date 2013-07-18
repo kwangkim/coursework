@@ -2,7 +2,7 @@ cw.Browser = cw.Modal.extend
     title: 'Open an existing file'
 
     tagName: 'div'
-    className: 'browser'
+    id: 'browser'
 
     render: ->
         cw.Modal.prototype.render.call(this)

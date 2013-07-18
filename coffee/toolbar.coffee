@@ -41,5 +41,5 @@ cw.Toolbar = Backbone.View.extend
             alert "File saved as #{filename}."
 
     settings: ->
-        cw.settings = new cw.Settings() unless cw.settings
+        cw.settings = new cw.SettingsView(model: new cw.Settings()) unless cw.settings
         cw.settings.show()

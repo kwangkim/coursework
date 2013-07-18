@@ -2,6 +2,7 @@ min-panel-width = 300px
 highlight = #0393F3
 dark-grey = #222
 light-grey = #eee
+mid-grey = #8F8F8F
 
 table-border()
   border-style solid
@@ -31,19 +32,6 @@ body
   margin 0
   overflow-y hidden
 
-header
-  background light-grey
-  color dark-grey
-  padding 0 20px
-  border-bottom 1px solid black
-  height 50px
-
-  input
-    margin-top 11px
-    padding 3px
-    font-size 20px
-    border none
-
 #logo
   border 3px solid dark-grey
   padding 2px 6px
@@ -51,7 +39,7 @@ header
   border-radius 50%
   width 42px
 
-#logohover
+#logo:hover
   border-color highlight
 
 nav
@@ -64,18 +52,33 @@ nav
       margin-right 25px
 
 header
+  min-width 900px
+  background light-grey
+  color dark-grey
+  padding 0 20px
+  border-bottom 1px solid black
+  height 50px
+
+  input
+    margin-top 11px
+    padding 3px
+    font-size 20px
+    border none
+
   i
     cursor pointer
     color dark-grey
     -webkit-transition 0.2s all
 
-  ihover
+  i:hover
     color highlight
 
-  div.left > *
-    float left
-    margin-right 20px
+  div.left
+    min-width 600px
 
+    > *
+      float left
+      margin-right 20px
 
 pre code
   font-size 14px
@@ -135,7 +138,7 @@ td, th
   margin-top 13px
   width 200px
 
-#modal
+.modal
   width 600px
   height 600px
   position absolute
@@ -151,18 +154,25 @@ td, th
     margin 0
     padding 0
 
-    li
-      border-bottom 1px solid #8F8F8F
-
-.settings
-  padding 10px
-
+#settings
   li
-    padding 5px 15px
+    padding 5px
+
+  section
+    > ul
+      > li
+        padding 5px 25px
+        border-bottom 1px solid mid-grey
+
+  h3
+    margin 10px 15px
+    padding 0 0 10px 0
+    border-bottom 1px solid mid-grey
 
 .filelist
   li
     padding 20px
+    border-bottom 1px solid mid-grey
 
     i
       margin-right 10px

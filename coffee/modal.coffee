@@ -1,5 +1,5 @@
 cw.Modal = Backbone.View.extend
-    id: 'modal'
+    className: 'modal'
     events:
         'click .close': 'close'
 

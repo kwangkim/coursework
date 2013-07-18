@@ -1,34 +1,44 @@
-<h3>Editor</h3>
-<ul>
-    <li>
-        Colour scheme
-        <input list="schemes" />
-        <datalist id="schemes">
-              <option value="Monokai">
-              <option value="Solarized">
-              <option value="GitHub">
-        </datalist>
-        <span class="description">Colour scheme used for syntax highlighting</span>
-    </li>
-</ul>
+<section class="editor">
+    <h3>Editor</h3>
+    <ul>
+        <li>
+            Colour scheme
+            <input list="schemes" id="scheme"/>
+            <datalist id="schemes">
+                  <option value="Monokai">
+                  <option value="Solarized">
+                  <option value="GitHub">
+            </datalist>
+            <span class="description">Colour scheme used for syntax highlighting</span>
+        </li>
+    </ul>
+</section>
 
-<h3>Markdown</h3>
-<ul>
-    <li>
-        <input type="checkbox">
-        SmartyPants
-        <span class="description">Improves appearance of quotes, dashes and ellipses</span>
-    </li>
-</ul>
+<section class="markdown">
+    <h3>Markdown</h3>
+    <ul>
+        <li>
+            <input type="checkbox" id="smartypants">
+            SmartyPants
+            <span class="description">Improves appearance of quotes, dashes and ellipses</span>
+        </li>
+    </ul>
+</section>
 
-<h3>LaTeX</h3>
-<ul>
-    <li>
-        Block delimiter
-        <span class="description">Strings used to delimit LaTeX in the document</span>
-        <ul>
-            <li>Start:&nbsp;<input type="text" value="$" size="5"></li>
-            <li>End:&nbsp;<input type="text" value="$" size="5"></li>
-        </ul>
-    </li>
-</ul>
+<section class="latex">
+    <h3>LaTeX</h3>
+    <ul>
+        <li>
+            Block delimiter
+            <span class="description">Strings used to delimit LaTeX in the document</span>
+            <ul>
+                <li>Start:&nbsp;<input type="text" size="5" id="delim-start"></li>
+                <li>End:&nbsp;<input type="text" size="5" id="delim-end"></li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="end">
+    <input type="button" value="Save" class="right">
+</section>
