@@ -19,7 +19,7 @@ cw.Browser = cw.Modal.extend
                 console.log(error)
                 return
 
-            @entries = ({name: e} for e in entries)
+            @entries = ({fullname: e} for e in entries)
 
             @render()
         )

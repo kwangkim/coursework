@@ -1,6 +1,15 @@
 File = Backbone.Model.extend
     defaults:
-        name: 'test'
+        name: 'file'
+        extension: '.md'
+
+    fullname: -> "#{@get('name')}.#{@get('extension')}"
+
+    initialize: ->
+        parts = @get('fullname').split('.')
+        @set('name', parts[0])
+        @set('extension', parts[1])
+
 
 cw.FileList = Backbone.Collection.extend
     model: File
@@ -16,7 +25,7 @@ cw.FileView = Backbone.View.extend
         this
 
     open: ->
-        cw.client.readFile(@model.get('name'), (error, data) ->
+        cw.client.readFile(@model.fullname(), (error, data) ->
             if error
                 console.log(error)
                 return
@@ -29,9 +38,8 @@ cw.FileListView = Backbone.View.extend
     tagName: 'ul'
     className: 'filelist'
 
-    initialize: (e) ->
-        console.log(e)
-        @collection = new cw.FileList(e)
+    initialize: (entries) ->
+        @collection = new cw.FileList(entries)
         @render()
 
     render: ->
