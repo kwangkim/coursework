@@ -8,7 +8,7 @@
     "grunt": "*",
     "grunt-contrib-jst": "*",
     "grunt-contrib-coffee": "*",
-    "grunt-contrib-sass": "*",
+    "grunt-contrib-stylus": "*",
     "grunt-contrib-watch": "*",
     "grunt-contrib-connect": "*",
     "grunt-contrib-clean": "*",

@@ -22,14 +22,7 @@ Download [this][], extract it, run a server (`python -m SimpleHTTPServer` or som
 
 ### Build from scratch
 
-Make sure you have all the system dependencies:
-
-- Not Windows
-- Git
-- Node.js (and therefore npm)
-- Sass
-
-then run
+Make sure you have Git and Node installed and are on some sort of Unix, then run:
 
     git clone https://github.com/lavelle/coursework.git
     cd coursework

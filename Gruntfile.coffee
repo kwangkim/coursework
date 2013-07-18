@@ -35,16 +35,16 @@ module.exports = (grunt) ->
         files:
           'js/all.js': ("coffee/#{coffee}.coffee" for coffee in coffees)
 
-    sass:
-      dist:
+    stylus:
+      compile:
         files:
-          'css/style.css': 'sass/style.sass'
+          'css/style.css': 'stylus/style.styl'
 
     clean: ['js/*.js', 'css/*.css', 'build']
 
     watch:
       scripts:
-        files: ['sass/*.sass', 'coffee/*.coffee', 'templates/*.html']
+        files: ['stylus/*.styl', 'coffee/*.coffee', 'templates/*.html']
         tasks: ['default']
 
     jst:
@@ -95,10 +95,10 @@ module.exports = (grunt) ->
           dest: 'build'
         ]
 
-  contribs = ['coffee', 'sass', 'watch', 'connect', 'clean', 'jst', 'copy', 'uglify']
+  contribs = ['coffee', 'stylus', 'watch', 'connect', 'clean', 'jst', 'copy', 'uglify']
 
   for task in contribs
     grunt.loadNpmTasks "grunt-contrib-#{task}"
 
-  grunt.registerTask 'default', ['sass', 'coffee', 'jst']
+  grunt.registerTask 'default', ['stylus', 'coffee', 'jst']
   grunt.registerTask 'build', ['default', 'copy', 'uglify']
