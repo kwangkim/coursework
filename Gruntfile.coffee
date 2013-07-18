@@ -1,5 +1,15 @@
 # Source files. Order matters.
-coffees = ['intro', 'client', 'modal', 'browser', 'settings', 'editor', 'toolbar', 'main']
+coffees = [
+  'intro'
+  'client'
+  'modal'
+  'file'
+  'browser'
+  'settings'
+  'editor'
+  'toolbar'
+  'main'
+]
 
 module.exports = (grunt) ->
   grunt.initConfig

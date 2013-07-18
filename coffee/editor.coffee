@@ -1,4 +1,5 @@
 # Setup Ace Editor
+$('#editor').height($(window).height() - $('header').height())
 editor = ace.edit 'editor'
 editor.setTheme 'ace/theme/monokai'
 editor.getSession().setMode 'ace/mode/markdown'

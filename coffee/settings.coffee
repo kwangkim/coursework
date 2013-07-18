@@ -1,4 +1,8 @@
 cw.Settings = cw.Modal.extend
-    content: -> JST.settings()
+    className: 'settings'
+
+    render: ->
+        cw.Modal.prototype.render.call(this)
+        @$('.content').html(JST.settings())
 
     title: 'Settings'

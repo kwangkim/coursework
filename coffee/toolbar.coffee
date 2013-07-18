@@ -9,7 +9,7 @@ cw.Toolbar = Backbone.View.extend
         'click #settings': 'settings'
 
     render: ->
-        @$el.html JST.toolbar()
+        @$el.html(JST.toolbar())
         this
 
     connect: -> cw.auth()

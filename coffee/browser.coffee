@@ -1,25 +1,26 @@
-File = Backbone.Model.extend
-    defaults:
-        name: ''
-
-FileList = Backbone.Collection.extend
-    model: File
-
 cw.Browser = cw.Modal.extend
     title: 'Open an existing file'
 
-    content: -> JST.browser(entries: @entries)
+    tagName: 'div'
+    className: 'browser'
+
+    render: ->
+        cw.Modal.prototype.render.call(this)
+        @$('.content')
+            .append(JST.browser())
+            .append(new cw.FileListView(@entries).render().el)
+        this
 
     entries: []
 
     load: ->
-        # @listenTo @entries, 'change', @render
         cw.client.readdir('/', (error, entries) =>
             if error
                 console.log(error)
                 return
 
-            @entries = entries
+            @entries = ({name: e} for e in entries)
 
             @render()
         )
+

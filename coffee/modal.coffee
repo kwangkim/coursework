@@ -21,10 +21,9 @@ cw.Modal = Backbone.View.extend
     render: ->
         @$el.html(@template)
         @$('h2').text(@title)
-        @$('.content').html(@content())
-
         this
 
     show: ->
         dom.shade.show()
+        @load()
         @$el.centre().fadeIn('fast')
