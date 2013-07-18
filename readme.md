@@ -62,6 +62,18 @@ I wanted to move to an all-digital solution for taking notes in lectures. I have
 [Underscore]:    http://underscorejs.org/
 [jquery]:        http://jquery.com/
 
+## Changelog
+
+### 0.0.2
+
+- Added basic support for browsing and opening files.
+- Switched from Sass to Stylus
+- Fixed some layout bugs
+
+### 0.0.1
+
+- Initial release
+
 ## License
 
 MIT licensed
