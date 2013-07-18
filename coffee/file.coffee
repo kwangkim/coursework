@@ -32,10 +32,10 @@ cw.FileListView = Backbone.View.extend
     initialize: (e) ->
         console.log(e)
         @collection = new cw.FileList(e)
-
         @render()
 
     render: ->
+        @$el.empty()
         _.each(@collection.models, ((file) =>
             view = new cw.FileView(model: file)
             @$el.append(view.render().el)

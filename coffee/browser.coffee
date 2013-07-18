@@ -8,7 +8,7 @@ cw.Browser = cw.Modal.extend
         cw.Modal.prototype.render.call(this)
         @$('.content')
             .append(JST.browser())
-            .append(new cw.FileListView(@entries).render().el)
+            .append(new cw.FileListView(@entries).el)
         this
 
     entries: []
