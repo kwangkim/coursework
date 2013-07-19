@@ -1,8 +1,8 @@
 {
   "name": "Coursework",
-  "version": "0.0.2",
-  "description": "Text editor",
-  "main": "js/main.js",
+  "version": "0.0.3",
+  "description": "Write documents in LaTeX and Markdown",
+  "main": "js/all.js",
   "dependencies": {},
   "devDependencies": {
     "grunt": "*",
