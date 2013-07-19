@@ -4,18 +4,12 @@
 <head>
 <title>Coursework</title>
 
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']]
-    }
-});
-</script>
-
 <link rel="stylesheet" href="vendor/normalize-css/normalize.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="vendor/highlightjs/styles/github.css">
 <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+<link rel="shortcut icon" href="favicon.ico">
+
 </head>
 
 <body>
@@ -36,12 +30,9 @@ MathJax.Hub.Config({
 <div class="clearfix"></div>
 
 <div id="main">
-
-<div id="editor"></div>
-<div id="viewer"></div>
-
-<div class="clearfix"></div>
-
+    <div id="editor"></div>
+    <div id="viewer"></div>
+    <div class="clearfix"></div>
 </div>
 
 <!-- Uncomment for build -->
@@ -51,6 +42,8 @@ MathJax.Hub.Config({
 <script src="vendor/jquery/jquery.js"></script>
 <script src="vendor/underscore/underscore.js"></script>
 <script src="vendor/backbone/backbone.js"></script>
+<script src="vendor/backbone-deep-model/distribution/deep-model.js"></script>
+
 <script src="vendor/marked/lib/marked.js"></script>
 <script src="vendor/highlightjs/highlight.pack.js"></script>
 <script src="vendor/dropbox/dropbox.js"></script>

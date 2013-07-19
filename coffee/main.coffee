@@ -1,10 +1,4 @@
 $(document).ready ->
-    # list = new FileList [{name: 'test'}]
-
-    toolbar = new cw.Toolbar()
-    toolbar.$el.appendTo('header > .right')
-    toolbar.render()
-
     elements = [
         'viewer', 'message', 'save-message', 'filename'
     ]
@@ -17,6 +11,9 @@ $(document).ready ->
 
     # Load the sample document and insert it into the editor
     $.get('sample.md', (text) -> cw.editor.setValue(text))
+
+    # Trigger a change in the settings model to apply the defaults on page load
+    cw.settings.model.trigger('change:markdown.* change:latex.*')
 
     # Generate the initial document preview
     cw.update()

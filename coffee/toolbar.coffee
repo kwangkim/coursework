@@ -8,6 +8,10 @@ cw.Toolbar = Backbone.View.extend
         'click #export': 'export'
         'click #settings': 'settings'
 
+    initialize: ->
+        @render()
+        @$el.appendTo('header > .right')
+
     render: ->
         @$el.html(JST.toolbar())
         this
@@ -15,7 +19,6 @@ cw.Toolbar = Backbone.View.extend
     connect: -> cw.auth()
 
     open: ->
-        cw.browser = new cw.Browser() unless cw.browser
         cw.browser.show()
 
     # Save the current document to Dropbox.
@@ -41,5 +44,7 @@ cw.Toolbar = Backbone.View.extend
             alert "File saved as #{filename}."
 
     settings: ->
-        cw.settings = new cw.SettingsView(model: new cw.Settings()) unless cw.settings
         cw.settings.show()
+
+cw.toolbar = new cw.Toolbar()
+

@@ -24,3 +24,4 @@ cw.Browser = cw.Modal.extend
             @render()
         )
 
+cw.browser = new cw.Browser()
