@@ -16,6 +16,7 @@
     "normalize-css": "2",
     "highlightjs": "7",
     "dropbox": "lavelle/dropbox",
-    "MathJax": "mathjax/MathJax"
+    "MathJax": "mathjax/MathJax",
+    "backbone-deep-model": "~0.10.4"
   }
 }
