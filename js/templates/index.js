@@ -2,16 +2,21 @@ this["JST"] = this["JST"] || {};
 
 this["JST"]["browser"] = function(obj) {
 obj || (obj = {});
-var __t, __p = '', __e = _.escape, __j = Array.prototype.join;
-function print() { __p += __j.call(arguments, '') }
+var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<ul>\n    ';
- _.each(entries, function(entry) { ;
-__p += '\n        <li>' +
-((__t = ( entry )) == null ? '' : __t) +
-'</li>\n    ';
- }); ;
-__p += '\n</ul>\n';
+__p += '<ul class="menu">\n    <li id="save">\n        <i class="icon-save"></i>\n    </li>\n</ul>\n';
+
+}
+return __p
+};
+
+this["JST"]["file"] = function(obj) {
+obj || (obj = {});
+var __t, __p = '', __e = _.escape;
+with (obj) {
+__p += '<i class="icon-file icon-large"></i>' +
+((__t = ( name )) == null ? '' : __t) +
+'\n';
 
 }
 return __p
@@ -31,7 +36,7 @@ this["JST"]["settings"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<h2>Settings</h2>\n\n<h3>Theme</h3>\n\n<h3>Markdown</h3>\n<ul>\n    <li>\n        SmartyPants\n        <span class="description">Improves appearance of quotes, dashes and ellipses</span>\n        <input type="tick">\n    </li>\n</ul>\n';
+__p += '<section class="editor">\n    <h3>Editor</h3>\n    <ul>\n        <li>\n            Colour scheme\n            <input list="schemes" id="scheme"/>\n            <datalist id="schemes">\n                  <option value="Monokai">\n                  <option value="Solarized">\n                  <option value="GitHub">\n            </datalist>\n            <span class="description">Colour scheme used for syntax highlighting</span>\n        </li>\n    </ul>\n</section>\n\n<section class="markdown">\n    <h3>Markdown</h3>\n    <ul>\n        <li>\n            <input type="checkbox" id="smartypants">\n            SmartyPants\n            <span class="description">Improves appearance of quotes, dashes and ellipses</span>\n        </li>\n    </ul>\n</section>\n\n<section class="latex">\n    <h3>LaTeX</h3>\n    <ul>\n        <li>\n            Block delimiter\n            <span class="description">Strings used to delimit LaTeX in the document</span>\n            <ul>\n                <li>Start:&nbsp;<input type="text" size="5" id="delim-start"></li>\n                <li>End:&nbsp;<input type="text" size="5" id="delim-end"></li>\n            </ul>\n        </li>\n    </ul>\n</section>\n\n<section class="end">\n    <input type="button" value="Save" class="right" id="save">\n</section>\n';
 
 }
 return __p
