@@ -23,8 +23,10 @@ module.exports = (grunt) ->
         files:
           'build/js/vendor.js': [
             'vendor/jquery/jquery.js'
+            'vendor/jquery-ui/ui/jquery-ui.js'
             'vendor/underscore/underscore.js'
             'vendor/backbone/backbone.js'
+            'vendor/backbone-deep-model/distribution/deep-model.js'
             'vendor/marked/lib/marked.js'
             'vendor/dropbox/dropbox.js'
             'vendor/highlightjs/highlight.pack.js'
