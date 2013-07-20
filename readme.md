@@ -87,4 +87,4 @@ I wanted to move to an all-digital solution for taking notes in lectures. I have
 
 MIT licensed
 
-Copyright (c) 2013 Giles Lavelle
+Copyright (c) 2013 Giles Lavelle, Sam Green
