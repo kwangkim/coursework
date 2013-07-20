@@ -45,8 +45,10 @@ I wanted to move to an all-digital solution for taking notes in lectures. I have
 - [Normalize.css][]
 - [Font Awesome][]
 - [Backbone][]
+- [backbone-deep-model][bdm]
 - [Underscore][]
 - [jQuery][]
+- [jQuery UI][]
 
 [online]: http://lavelle.github.io/coursework
 [this]: https://github.com/lavelle/coursework/archive/gh-pages.zip
@@ -59,8 +61,10 @@ I wanted to move to an all-digital solution for taking notes in lectures. I have
 [normalize.css]: http://necolas.github.io/normalize.css/
 [font awesome]:  http://fortawesome.github.io/Font-Awesome/
 [Backbone]:      http://backbonejs.org/
+[bdm]:           https://github.com/powmedia/backbone-deep-model
 [Underscore]:    http://underscorejs.org/
 [jquery]:        http://jquery.com/
+[jquery ui]:     http://jqueryui.com/
 
 ## Changelog
 
