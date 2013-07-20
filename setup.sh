@@ -1,7 +1,7 @@
 #! /bin/bash
 
-echo "This script requires you to have Node.js, npm and Sass installed."
-echo "If you run those programs with sudo, you'll to run this script with sudo too."
+echo "This script requires you to have Node.js and npm installed."
+echo "If you run npm with sudo, you'll to run this script with sudo too."
 echo "If you've done all of that, we can proceed."
 echo "Run the script? (y/n)"
 read answer
@@ -23,7 +23,7 @@ else
     exit
 fi
 
-if [[ echo $? = "3" ]]; then
+if [[ $? = "3" ]]; then
     echo "npm install failed. You need to be root."
     echo "Try running sudo tools/setup.sh"
 fi
@@ -35,6 +35,6 @@ echo "Installing client-side third-party dependencies."
 bower install
 
 echo "Building Coursework."
-grunt coffee sass jst
+grunt
 
 echo "Done. Make sure to run a local server to view Coursework in the browser."
