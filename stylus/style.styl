@@ -8,14 +8,19 @@ table-border()
   border-style solid
   border-color #bbb
 
-*
+box-sizing()
   -webkit-box-sizing border-box
+  -moz-box-sizing border-box
+  box-sizing border-box
 
-.clearfixbefore, .clearfixafter
+*
+  box-sizing()
+
+.clearfix:before, .clearfix:after
   content " "
   display table
 
-.clearfixafter
+.clearfix:after
   clear both
 
 .clearfix
