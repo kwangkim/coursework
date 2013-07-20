@@ -7,7 +7,7 @@
     "components"
   ],
   "dependencies": {
-    "jquery": "2",
+    "jquery": "1",
     "marked": "0",
     "font-awesome": "3",
     "ace-builds": "1",
@@ -17,6 +17,7 @@
     "highlightjs": "7",
     "dropbox": "lavelle/dropbox",
     "MathJax": "mathjax/MathJax",
-    "backbone-deep-model": "~0.10.4"
+    "backbone-deep-model": "~0.10.4",
+    "jquery-ui": "~1.10.3"
   }
 }
