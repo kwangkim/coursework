@@ -112,6 +112,33 @@ cw.update = (delta) ->
     dom.save_message.css({color: if warning then '#a00' else '#aaa'})
     dom.save_message.text(msg)
 
+$e.on('dragenter', ->
+    return false
+)
+
+$e.on('dragexit', ->
+    return false
+)
+
+$e.on('dragover', ->
+    return false
+)
+
+$e.on('drop', (event) ->
+    console.log(event)
+    file = event.originalEvent.dataTransfer.files[0]
+
+    if file? and ['md', 'tex'].indexOf(file.name.split('.').pop()) isnt -1
+        reader = new FileReader()
+
+        reader.onload = (event) ->
+            cw.editor.setValue(event.target.result)
+            dom.filename.val(file.name.split('.')[0])
+
+        reader.readAsText(file)
+    return false
+)
+
 # Only render the document at most once a second
 delay = 1000
 
