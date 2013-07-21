@@ -46,7 +46,7 @@ this["JST"]["toolbar"] = function(obj) {
 obj || (obj = {});
 var __t, __p = '', __e = _.escape;
 with (obj) {
-__p += '<ul>\n    <li id="dropbox">\n        <i class="icon-folder-close" title="Connect to Dropbox"></i>\n    </li>\n    <li id="open">\n        <i class="icon-file" title="Open an existing document"></i>\n    </li>\n    <li id="save">\n        <i class="icon-save" title="Save your work"></i>\n    </li>\n    <li id="export">\n        <i class="icon-arrow-right" title="Export as PDF"></i>\n    </li>\n    <li id="settings">\n        <i class="icon-cog" title="Settings"></i>\n    </li>\n</ul>\n';
+__p += '<ul>\n    <li id="dropbox">\n        <i class="icon-dropbox" title="Connect to Dropbox"></i>\n    </li>\n    <li id="open">\n        <i class="icon-folder-open" title="Open an existing document"></i>\n    </li>\n    <li id="save">\n        <i class="icon-save" title="Save your work"></i>\n    </li>\n    <li id="export">\n        <i class="icon-arrow-right" title="Export as PDF"></i>\n    </li>\n    <li id="settings">\n        <i class="icon-cog" title="Settings"></i>\n    </li>\n</ul>\n';
 
 }
 return __p

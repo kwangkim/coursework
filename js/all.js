@@ -281,7 +281,8 @@
 }).call(this);
 
 (function() {
-  var $e, $h, $r, $v, $w, delay, formatLists, half_min, half_rw, header_height, height, min_width, panel, pos, ratio, resizer_width, save_message, throttled, twice_vp, viewer_padding, width, _i, _len, _ref;
+  var $e, $h, $r, $v, $w, delay, formatLists, half_min, half_rw, header_height, height, min_width, panel, pos, ratio, resizer_width, save_message, session, throttled, twice_vp, viewer_padding, width, _i, _len, _ref,
+    __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
   $w = $(window);
 
@@ -297,7 +298,11 @@
 
   cw.editor.setTheme('ace/theme/monokai');
 
-  cw.editor.getSession().setMode('ace/mode/markdown');
+  session = cw.editor.getSession();
+
+  session.setMode('ace/mode/markdown');
+
+  session.setUseWrapMode(true);
 
   min_width = 250;
 
@@ -385,6 +390,41 @@
     });
     return dom.save_message.text(msg);
   };
+
+  $e.on('dragenter', function() {
+    return false;
+  });
+
+  $e.on('dragexit', function() {
+    return false;
+  });
+
+  $e.on('dragover', function() {
+    return false;
+  });
+
+  $e.on('drop', function(event) {
+    var extension, file, name, parts, reader, valid;
+    console.log(event);
+    file = event.originalEvent.dataTransfer.files[0];
+    if (file != null) {
+      parts = file.name.split('.');
+      extension = parts.pop();
+      valid = ['md', 'tex'];
+      if (__indexOf.call(valid, extension) >= 0) {
+        reader = new FileReader();
+        name = parts.join('.');
+        reader.onload = function(event) {
+          cw.editor.setValue(event.target.result);
+          return dom.filename.val(name);
+        };
+        reader.readAsText(file);
+      } else {
+        alert("Invalid file extension: " + extension);
+      }
+    }
+    return false;
+  });
 
   delay = 1000;
 
