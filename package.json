@@ -1,6 +1,6 @@
 {
   "name": "Coursework",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Write documents in LaTeX and Markdown",
   "main": "js/all.js",
   "dependencies": {},

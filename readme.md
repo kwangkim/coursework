@@ -68,6 +68,11 @@ I wanted to move to an all-digital solution for taking notes in lectures. I have
 
 ## Changelog
 
+### 0.0.5
+
+- Improved file upload
+- Changed icons
+
 ### 0.0.4
 
 - Panels can now be resized.
