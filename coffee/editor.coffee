@@ -128,14 +128,23 @@ $e.on('drop', (event) ->
     console.log(event)
     file = event.originalEvent.dataTransfer.files[0]
 
-    if file? and ['md', 'tex'].indexOf(file.name.split('.').pop()) isnt -1
-        reader = new FileReader()
+    if file?
+        parts = file.name.split('.')
+        extension = parts.pop()
+        valid = ['md', 'tex']
 
-        reader.onload = (event) ->
-            cw.editor.setValue(event.target.result)
-            dom.filename.val(file.name.split('.')[0])
+        if extension in valid
+            reader = new FileReader()
+            name = parts.join('.')
 
-        reader.readAsText(file)
+            reader.onload = (event) ->
+                cw.editor.setValue(event.target.result)
+                dom.filename.val(name)
+
+            reader.readAsText(file)
+
+        else
+            alert("Invalid file extension: #{extension}")
     return false
 )
 
