@@ -7,7 +7,10 @@ $r = $('#resizer')
 
 cw.editor = ace.edit('editor')
 cw.editor.setTheme('ace/theme/monokai')
-cw.editor.getSession().setMode('ace/mode/markdown')
+
+session = cw.editor.getSession()
+session.setMode('ace/mode/markdown')
+session.setUseWrapMode(true)
 
 # Constants
 min_width = 250
