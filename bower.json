@@ -15,9 +15,9 @@
     "underscore": "1",
     "normalize-css": "2",
     "highlightjs": "7",
-    "dropbox": "lavelle/dropbox",
-    "MathJax": "mathjax/MathJax",
-    "backbone-deep-model": "~0.10.4",
-    "jquery-ui": "~1.10.3"
+    "backbone-deep-model": "0",
+    "jquery-ui": "1",
+    "MathJax": "*",
+    "dropbox-build": "*"
   }
 }
